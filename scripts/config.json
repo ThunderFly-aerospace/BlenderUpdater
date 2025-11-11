@@ -1,0 +1,10 @@
+{
+  "parts": [
+    {
+      "name": "./parts_in_use/part.stl"
+    }
+  ],
+  "paths": [
+    "./parts_in_use/*.stl"
+  ]
+}
