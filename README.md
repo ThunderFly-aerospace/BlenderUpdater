@@ -2,6 +2,8 @@
 
 A Python package for updating mesh models in Blender projects while preserving their properties (textures, colors, materials, etc.).
 
+> 🚀 **New to BlenderUpdater?** Check out the [Quick Start Guide](QUICKSTART.md) to get up and running in 5 minutes!
+
 ## Features
 
 - Updates mesh geometry while preserving UV maps, materials, and other properties
