@@ -4,6 +4,8 @@ A Python package for updating mesh models in Blender projects while preserving t
 
 > 🚀 **New to BlenderUpdater?** Check out the [Quick Start Guide](QUICKSTART.md) to get up and running in 5 minutes!
 
+> 📦 **Want to try it out?** See the [Example Project](example_project/) with sample meshes and a ready-to-use Blender file!
+
 ## Features
 
 - Updates mesh geometry while preserving UV maps, materials, and other properties
@@ -30,8 +32,15 @@ There are two ways to use BlenderUpdater:
 
 Install the addon for a graphical user interface directly in Blender:
 
+**From Release (Easiest):**
+1. Download `blender_updater_addon-*.zip` from the [Releases page](https://github.com/ThunderFly-aerospace/BlenderUpdater/releases)
+2. In Blender: `Edit > Preferences > Add-ons > Install`
+3. Select the downloaded zip file
+4. Enable "Import-Export: BlenderUpdater"
+
+**From Source:**
 1. In Blender: `Edit > Preferences > Add-ons > Install`
-2. Select the `blender_addon` folder
+2. Select the `blender_addon` folder from this repository
 3. Enable "Import-Export: BlenderUpdater"
 4. Access from 3D View sidebar (press `N`) > BlenderUpdater tab
 

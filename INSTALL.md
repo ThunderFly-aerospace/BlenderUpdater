@@ -16,7 +16,24 @@ Best for CI/CD pipelines, scripts, and automated workflows.
 
 ## Installing the Blender Addon (UI)
 
-### Method 1: Through Blender UI (Recommended)
+### Method 1: Download Pre-built ZIP (Easiest)
+
+1. **Download the addon**:
+   - Go to the [Releases page](https://github.com/ThunderFly-aerospace/BlenderUpdater/releases)
+   - Download `blender_updater_addon-*.zip`
+
+2. **Install in Blender**:
+   - Open Blender
+   - Go to `Edit` > `Preferences` > `Add-ons`
+   - Click the `Install...` button
+   - Select the downloaded zip file
+   - Click `Install Add-on`
+
+3. **Enable the addon**:
+   - In the Add-ons preferences, search for "BlenderUpdater"
+   - Check the box next to "Import-Export: BlenderUpdater"
+
+### Method 2: From Source
 
 1. **Download the addon**:
    - Clone this repository or download it as a ZIP

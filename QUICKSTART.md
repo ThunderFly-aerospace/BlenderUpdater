@@ -2,6 +2,8 @@
 
 Get started with BlenderUpdater in 5 minutes!
 
+> 💡 **Want to see it in action first?** Check out the [Example Project](example_project/) with ready-to-use mesh files and a Blender project!
+
 ## Choose Your Path
 
 ### 🎨 I want a graphical interface → [Use the Addon](#using-the-addon)

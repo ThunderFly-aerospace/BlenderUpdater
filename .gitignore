@@ -15,12 +15,16 @@ dist/
 build/
 *.egg-info/
 .eggs/
+blender_updater_addon-*.zip
 
-# Parts and models
+# Parts and models (but allow example files)
 parts_in_use/
 *.stl
 *.glb
 *.gltf
+!example_project/parts/*.stl
+!example_project/parts/*.glb
+!example_project/parts/*.gltf
 
 # OS
 .DS_Store
