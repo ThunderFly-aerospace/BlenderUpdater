@@ -1,0 +1,13 @@
+{
+  "parts": [
+    {
+      "name": "./parts/cube.stl"
+    },
+    {
+      "name": "./parts/cylinder.stl"
+    }
+  ],
+  "paths": [
+    "./parts/*.stl"
+  ]
+}
