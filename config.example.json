@@ -1,0 +1,14 @@
+{
+  "parts": [
+    {
+      "name": "./parts_in_use/part1.stl"
+    },
+    {
+      "name": "./parts_in_use/component.glb"
+    }
+  ],
+  "paths": [
+    "./parts_in_use/*.stl",
+    "./models/*.glb"
+  ]
+}

@@ -8,37 +8,62 @@ A Python package for updating mesh models in Blender projects while preserving t
 - Supports multiple file formats: STL, GLB, GLTF
 - Configuration-based batch updating
 - Preserves object hierarchy and transformations
+- **Two usage modes:**
+  - **UI Addon**: Graphical interface within Blender for interactive use
+  - **CLI Package**: Command-line tool for automation and CI/CD pipelines
 - Pip-installable package for easy reuse across projects
+
+## Use Cases
+
+- **Interactive Design Work**: Use the Blender addon UI to quickly update meshes during design iterations
+- **Automated Builds**: Use the CLI in scripts and automation workflows
+- **Version Control**: Keep only configuration files in your repo, install BlenderUpdater as a dependency
+- **Multiple Projects**: Install once, use across all your Blender projects
 
 ## Installation
 
-### Install from local source
+There are two ways to use BlenderUpdater:
+
+### Option 1: Blender Addon with UI (Recommended for most users)
+
+Install the addon for a graphical user interface directly in Blender:
+
+1. In Blender: `Edit > Preferences > Add-ons > Install`
+2. Select the `blender_addon` folder
+3. Enable "Import-Export: BlenderUpdater"
+4. Access from 3D View sidebar (press `N`) > BlenderUpdater tab
+
+### Option 2: Python Package for CLI (For automation and scripts)
+
+Install as a pip package for command-line usage:
 
 ```bash
-# Navigate to the repository
-cd BlenderUpdater
+# Install from source
+/path/to/blender/python -m pip install .
 
-# Install using Blender's pip
-/path/to/blender/python/bin/python -m pip install .
+# Or install from GitHub
+/path/to/blender/python -m pip install git+https://github.com/ThunderFly-aerospace/BlenderUpdater.git
 ```
 
-### Install from GitHub
-
-```bash
-# Install directly from GitHub using Blender's pip
-/path/to/blender/python/bin/python -m pip install git+https://github.com/ThunderFly-aerospace/BlenderUpdater.git
-```
-
-**Note**: The exact path to Blender's Python varies by platform:
-- **Linux**: `/usr/share/blender/3.x/python/bin/python3.x`
-- **macOS**: `/Applications/Blender.app/Contents/Resources/3.x/python/bin/python3.x`
-- **Windows**: `C:\Program Files\Blender Foundation\Blender 3.x\3.x\python\bin\python.exe`
+**📖 See [INSTALL.md](INSTALL.md) for detailed installation instructions, including platform-specific paths and troubleshooting.**
 
 ## Usage
 
-### As a Python Module (Recommended)
+### Using the Blender Addon (UI)
 
-Once installed, you can use BlenderUpdater from any Blender project:
+After installing the addon:
+
+1. Open your Blender project
+2. Press `N` to show the sidebar in 3D View
+3. Go to the `BlenderUpdater` tab
+4. Click `Select Config File` and choose your `config.json`
+5. Click `Update Meshes`
+
+The addon provides visual feedback and error messages directly in Blender's interface.
+
+### Using the CLI (Command Line)
+
+Once installed as a Python package, you can use BlenderUpdater from the command line:
 
 ```bash
 blender your_file.blend --python -m blender_updater -- --config config.json
@@ -58,9 +83,9 @@ For backward compatibility, the original script is still available in the `scrip
 blender your_file.blend --python scripts/do_complete_assembly.py -- --config scripts/config.json
 ```
 
-### In Your Python Code
+### Programmatic Usage
 
-You can also use BlenderUpdater programmatically within Blender:
+You can also use BlenderUpdater programmatically within Blender scripts:
 
 ```python
 from blender_updater import BlenderUpdater
