@@ -12,7 +12,9 @@ jobs:
   build-addon:
     name: Build Blender Addon ZIP
     runs-on: ubuntu-latest
-    
+    permissions:
+      contents: write  # For uploading release assets
+      
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
