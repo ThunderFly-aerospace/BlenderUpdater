@@ -1,0 +1,21 @@
+# Blender files
+*.blend
+*.blend1
+*.blend2
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Parts and models
+parts_in_use/
+*.stl
+*.glb
+*.gltf
+
+# OS
+.DS_Store
+Thumbs.db
