@@ -1,0 +1,10 @@
+include README.md
+include LICENSE
+include INSTALL.md
+include CHANGELOG.md
+include config.json
+include config.example.json
+include update_blend_file.sh
+recursive-include scripts *.py *.json
+recursive-include blender_updater *.py
+recursive-include blender_addon *.py *.md
