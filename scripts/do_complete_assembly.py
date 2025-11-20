@@ -31,10 +31,12 @@ with open(config_file, 'r') as file:
     config_data = json.load(file)
 
 print("Configuration file ", config_file)
-for parts in config_data['parts']:
-    print("Parts: ", parts)
-for paths in config_data['paths']:
-    print("Paths: ", paths)
+if "parts" in config_data:
+    for parts in config_data['parts']:
+        print("Parts: ", parts)
+if "paths" in config_data:
+    for paths in config_data['paths']:
+        print("Paths: ", paths)
 
 
 def deselect():
@@ -95,7 +97,7 @@ def import_and_rename(file, name = None, merge = True):
         imp_children = [o for o in imported_objs if o.type == 'MESH']
     
         # Apply transforms to imported children
-    bpy.ops.object.select_all(action='DESELECT')
+        bpy.ops.object.select_all(action='DESELECT')
         for imp_child in imp_children:
             imp_child.select_set(True)
             bpy.context.view_layer.objects.active = imp_child
